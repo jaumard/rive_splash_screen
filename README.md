@@ -26,8 +26,12 @@ The splash screen will show the animation and call the `onFinished` callback whe
 ```dart
 SplashScreen.callback(
     name: 'intro.riv',
-    onFinished: () {
+    onSuccess: (data) {
+      //data is the optional data returned by until callback function
       Navigator.of(context).pushReplacement(PageRouteBuilder(pageBuilder: (_,__,___) => MyHomePage(title: 'Flutter Demo Home Page')));
+    },
+    onError: (err, stack) {
+      //error throw by until callback function
     },
     loopAnimation: '1',
     until: () => Future.delayed(Duration(seconds: 1)),
