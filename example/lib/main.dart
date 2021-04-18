@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       home: SplashScreen.navigate(
         name: 'intro.riv',
         next: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
-        until: () => Future.delayed(Duration(seconds: 5)),
-        startAnimation: 'snowman',
+        until: () => Future.delayed(Duration(seconds: 2)),
+        startAnimation: 'Landing',
       ),
     );
   }
